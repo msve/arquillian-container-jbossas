@@ -56,6 +56,10 @@ public class JBossASConfiguration implements ContainerConfiguration
 
    private int shutdownTimeoutInSeconds = 45;
 
+   private boolean outputToConsole = true;
+
+   private String outputPrefix = null;
+
    enum JBossBindingSet {
       PORTS_01("ports-01", 100),
       PORTS_02("ports-02", 200),
@@ -277,5 +281,25 @@ public class JBossASConfiguration implements ContainerConfiguration
    public void setShutdownTimeoutInSeconds(int shutdownTimeoutInSeconds)
    {
       this.shutdownTimeoutInSeconds = shutdownTimeoutInSeconds;
+   }
+
+   public boolean isOutputToConsole()
+   {
+      return outputToConsole;
+   }
+
+   public void setOutputToConsole(boolean outputToConsole)
+   {
+      this.outputToConsole = outputToConsole;
+   }
+
+   public String getOutputPrefix()
+   {
+      return outputPrefix;
+   }
+
+   public void setOutputPrefix(String outputPrefix)
+   {
+      this.outputPrefix = outputPrefix;
    }
 }

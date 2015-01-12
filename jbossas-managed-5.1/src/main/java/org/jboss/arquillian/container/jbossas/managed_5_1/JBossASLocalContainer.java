@@ -327,7 +327,9 @@ public class JBossASLocalContainer implements DeployableContainer<JBossASConfigu
       prop.setKey("java.endorsed.dirs");
       prop.setValue(new File(configuration.getJbossHome(), "lib/endorsed").getAbsolutePath());
       server.addSysProperty(prop);
-      
+      server.setOutputToConsole(configuration.isOutputToConsole());
+      server.setOutputPrefix(configuration.getOutputPrefix());
+
       return server;
    }
 
