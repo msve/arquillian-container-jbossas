@@ -57,6 +57,18 @@
         </dependencies>
     </dependencyManagement>
 
+    <repositories>
+        <repository>
+            <id>jboss-nexus-public</id>
+            <name>JBoss Nexus Public Repository</name>
+            <layout>default</layout>
+            <url>http://repository.jboss.org/nexus/content/groups/public</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <build>
         <plugins>
             <plugin>
